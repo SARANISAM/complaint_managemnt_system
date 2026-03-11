@@ -135,7 +135,7 @@ app.post('/api/complaints/status', async (req, res) => {
                 .insert([
                     { complaint_id, status, remarks }
                 ]);
-            
+
             if (remarkError) throw remarkError;
         }
 
