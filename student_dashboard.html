@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Complaint Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container curtain-reveal">
+        <nav>
+            <a href="student_dashboard.html" class="brand">COMPLAINT MANAGEMENT SYSTEM</a>
+            <div class="nav-links">
+                <a href="#" onclick="logout()">Logout</a>
+            </div>
+        </nav>
+
+        <div style="margin-top: 4rem;">
+            <p class="ui-label mb-2">Welcome Back</p>
+            <h1><span id="user-name">Student</span></h1>
+            
+            <div style="display: flex; gap: 2rem; margin-top: 4rem;">
+                <a href="submit_complaint.html" class="btn">Lodge a Request</a>
+                <a href="view_complaints.html" class="btn">View Submissions</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            checkAuth('student');
+        });
+    </script>
+</body>
+</html>

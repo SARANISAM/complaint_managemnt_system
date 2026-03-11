@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container center-screen curtain-reveal">
+        <h1 style="font-size: 2.5rem; letter-spacing: 0.05em;">COMPLAINT MANAGEMENT SYSTEM</h1>
+        <p class="ui-label" style="margin-bottom: 4rem;">System Access</p>
+        
+        <form id="login-form" class="form-group" onsubmit="login(event)">
+            <label for="username">Username</label>
+            <input type="text" id="username" required class="mb-2">
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" required class="mb-4">
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Enter</button>
+        </form>
+        <div style="margin-top: 2rem; text-align: center;">
+            <p class="ui-label" style="display: inline;">New User?</p>
+            <a href="signup.html" style="color: var(--text-graphite); text-decoration: none; font-family: var(--font-sans); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.1em; border-bottom: 1px solid var(--text-graphite); margin-left: 0.5rem;">Sign Up</a>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

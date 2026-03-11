@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Submissions - Complaint Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container curtain-reveal">
+        <nav>
+            <a href="admin_dashboard.html" class="brand">COMPLAINT MANAGEMENT <span style="font-size:0.5em; opacity:0.5;">ADMIN</span></a>
+            <div class="nav-links">
+                <a href="admin_dashboard.html">Dashboard</a>
+                <a href="#" onclick="logout()">Logout</a>
+            </div>
+        </nav>
+
+        <div style="margin-top: 2rem;">
+            <p class="ui-label mb-2">Global Overview</p>
+            <h1>Manage Submissions</h1>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Student</th>
+                        <th>Title</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                        <th>Update Status</th>
+                        <th>Add Remark</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="admin-complaints-tbody">
+                    <!-- Complaints injected here by app.js -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadAllComplaints();
+        });
+    </script>
+</body>
+</html>

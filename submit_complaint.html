@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Request - Complaint Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container curtain-reveal">
+        <nav>
+            <a href="student_dashboard.html" class="brand">COMPLAINT MANAGEMENT SYSTEM</a>
+            <div class="nav-links">
+                <a href="student_dashboard.html">Dashboard</a>
+                <a href="#" onclick="logout()">Logout</a>
+            </div>
+        </nav>
+
+        <div style="max-width: 600px; margin: 4rem auto;">
+            <p class="ui-label mb-2">New Submission</p>
+            <h1>Lodge a Request</h1>
+            
+            <form onsubmit="submitComplaint(event)" style="margin-top: 3rem;">
+                <div class="form-group" style="max-width: 100%;">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" required>
+                </div>
+
+                <div class="form-group" style="max-width: 100%;">
+                    <label for="description">Details</label>
+                    <textarea id="description" required></textarea>
+                </div>
+
+                <div class="form-group" style="max-width: 100%;">
+                    <label for="priority">Priority</label>
+                    <select id="priority">
+                        <option value="Low">Low - routine maintenance</option>
+                        <option value="Medium">Medium - requires attention</option>
+                        <option value="High">High - critical issue</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary mt-4">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            checkAuth('student');
+        });
+    </script>
+</body>
+</html>

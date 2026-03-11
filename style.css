@@ -1,0 +1,234 @@
+/* Arché - The Holistic Design Studio Vibe */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+    --bg-alabaster: #F2F0E9;
+    --text-graphite: #2A2A2A;
+    --accent-clay: #B07D62;
+    --accent-olive: #6B705C;
+    --line-grey: #D1D1D1;
+    
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-alabaster);
+    color: var(--text-graphite);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Smooth Lenis-like behavior built cleanly */
+    scroll-behavior: smooth;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+label, .ui-label {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--text-graphite);
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Layouts */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.center-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Forms & Inputs */
+.form-group {
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+input, select, textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--line-grey);
+    padding: 0.5rem 0;
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: var(--text-graphite);
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-bottom: 1px solid var(--text-graphite);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: transparent;
+    color: var(--text-graphite);
+    border: 1px solid var(--text-graphite);
+    padding: 1rem 2.5rem;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    background: var(--text-graphite);
+    color: var(--bg-alabaster);
+}
+
+.btn-primary {
+    background: var(--text-graphite);
+    color: var(--bg-alabaster);
+}
+
+.btn-primary:hover {
+    background: var(--accent-clay);
+    border-color: var(--accent-clay);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--line-grey);
+    margin-bottom: 4rem;
+}
+
+nav .brand {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--text-graphite);
+}
+
+nav .nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: var(--text-graphite);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+/* Tables for Complaints */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+.data-table th, .data-table td {
+    padding: 1.5rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--line-grey);
+}
+
+.data-table th {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+    font-weight: 400;
+}
+
+.data-table td {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    border: 1px solid;
+    border-radius: 50px;
+}
+
+.status-pending { border-color: var(--accent-clay); color: var(--accent-clay); }
+.status-resolved { border-color: var(--accent-olive); color: var(--accent-olive); }
+.status-in-progress { border-color: var(--text-graphite); color: var(--text-graphite); }
+
+/* Utility */
+.mb-2 { margin-bottom: 2rem; }
+.mb-4 { margin-bottom: 4rem; }
+.text-center { text-align: center; }
+
+/* Micro-interaction Curtain */
+.curtain-reveal {
+    animation: revealUp 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes revealUp {
+    0% { transform: translateY(40px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
