@@ -1,5 +1,7 @@
 // Base API URL
-const API_URL ='https://complaint-managemnt-system.onrender.com/api';
+const API_URL =window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+    ? 'http://localhost:3000/api' 
+    : '/api';
 // --- AUTHENTICATION ---
 async function signup(event) {
     event.preventDefault();
