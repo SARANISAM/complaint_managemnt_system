@@ -1,5 +1,5 @@
 // Base API URL
-const API_URL ="https://complaint-managemnt-system.onrender.com/api";
+const API_URL ='https://complaint-managemnt-system.onrender.com/api';
 // --- AUTHENTICATION ---
 async function signup(event) {
     event.preventDefault();
