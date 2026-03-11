@@ -144,7 +144,11 @@ app.post('/api/complaints/status', async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
+const path = require("path");
 
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "login.html"));
+});
 // Start Server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
